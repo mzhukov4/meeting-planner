@@ -8,7 +8,6 @@ class FetchAPI {
         return await response.json()
     }
 
-
     async updateScheduledMeeting(scheduledMeeting) {
         const response = await fetch('http://localhost:3000/scheduledMeeting', {
             method: 'PUT',
@@ -22,6 +21,7 @@ class FetchAPI {
         }
         return await response.json()
     }
+
     async getScheduledMeetingDate() {
         const response = await fetch(`http://localhost:3000/scheduledMeeting`)
         if (!response.ok) {
@@ -34,7 +34,7 @@ class FetchAPI {
         const scheduledMeeting = {
             datetime: '',
             timezone: ''
-          }
+        }
         const response = await fetch('http://localhost:3000/scheduledMeeting', {
             method: 'PUT',
             headers: {
